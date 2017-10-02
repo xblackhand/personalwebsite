@@ -1,1 +1,29 @@
 
+.header {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+.account {
+  float: right;
+}
+
+.navbar {
+  float: left;
+}
+
+.headerButton {
+  -webkit-appearance: none;
+  border: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  padding: .25em .75em;
+  margin-top: .5em;
+}
+
+.headerButton:hover {
+  color: #AAAAAA;
+}

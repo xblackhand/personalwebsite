@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
-import styles from '../App.css';
+import './header.css';
 
 export default class Header extends Component {
+  updatePage(page) {
+    this.props.updatePage(page);
+  }
+
   getHeader() {
     var header;
 
     header = (
-      <div className={styles.header}>
+      <div className='header'>
         {this.getNavBar()}
         {this.getAccount()}
       </div>
@@ -16,10 +20,10 @@ export default class Header extends Component {
 
   getNavBar() {
     return (
-      <div className={styles.navbar}>
-        <button>Home</button>
-        <button>Blog</button>
-        <button>Contact</button>
+      <div className='navbar'>
+        <button className='headerButton' onClick={() => this.updatePage('/')}>Home</button>
+        <button className='headerButton' onClick={() => this.updatePage('/blog')}>Blog</button>
+        <button className='headerButton' onClick={() => this.updatePage('/contact')}>Contact</button>
       </div>
     );
   }
@@ -30,42 +34,23 @@ export default class Header extends Component {
     if (this.props.user === '' || this.props.user === null) {
       account = (
         <div>
-          <button>Log in</button>
+          <button className='headerButton' onClick={() => this.updatePage('/login')}>Log in</button>
         </div>
       );
     } else {
       account = (
-        <button>Log out</button>
+        <div>
+          <span>{this.props.user}</span>
+          <button className='headerButton' onClick={this.props.logOut}>Log out</button>
+        </div>
       );
     }
 
     return (
-      <div className={styles.account}>
+      <div className='account'>
         {account}
       </div>
     )
-  }
-
-  userHeader() {
-    var headerItems;
-
-    headerItems = (
-      <div>
-        Welcome {this.props.user}!
-      </div>
-    );
-    return headerItems;
-  }
-
-  noUserHeader() {
-    var headerItems;
-
-    headerItems = (
-      <div>
-        NO USER LOGGED IN
-      </div>
-    );
-    return headerItems;
   }
 
   render() {

@@ -9,8 +9,8 @@ export default class HomePage extends Component {
     return (
       <div>
         HOMEPAGE
+        <br/>
         <button onClick={(e) => {this.updatePage('/error')}}>TO ERROR</button>
-        <button onClick={(e) => {this.updatePage('/login')}}>TO LOGIN</button>
       </div>
     );
   }

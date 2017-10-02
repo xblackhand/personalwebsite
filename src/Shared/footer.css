@@ -1,0 +1,16 @@
+.footer {
+  position: absolute;
+  display: table;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+}
+
+.textWrapper {
+  display: table-cell;
+  vertical-align: middle;
+}

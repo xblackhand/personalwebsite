@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import './footer.css';
 
 export default class Footer extends Component {
   render() {
     return (
-      <div>
-        FOOTER
+      <div className='footer'>
+        <div className='textWrapper'>
+          &copy;&nbsp;Travis Cook
+        </div>
       </div>
     );
   }

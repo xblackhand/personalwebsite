@@ -9,6 +9,7 @@ export default class ErrorPage extends Component {
     return (
       <div>
         ERRORPAGE
+        <br/>
         <button onClick={(e) => {this.updatePage('/')}}>TO HOME</button>
       </div>
     );
