@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class LoginPage extends Component {
   login() {
     var user = document.getElementById('username').value.trim();
-    if (user != '' && user != null) {
+    if (user !== '' && user !== null) {
       console.log(user);
       this.props.setUser(user);
     }

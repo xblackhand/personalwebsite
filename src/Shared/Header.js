@@ -6,24 +6,18 @@ export default class Header extends Component {
     this.props.updatePage(page);
   }
 
-  getHeader() {
-    var header;
-
-    header = (
-      <div className='header'>
-        {this.getNavBar()}
-        {this.getAccount()}
-      </div>
-    );
-    return header;
-  }
-
   getNavBar() {
     return (
       <div className='navbar'>
-        <button className='headerButton' onClick={() => this.updatePage('/')}>Home</button>
-        <button className='headerButton' onClick={() => this.updatePage('/blog')}>Blog</button>
-        <button className='headerButton' onClick={() => this.updatePage('/contact')}>Contact</button>
+        <div className='headerButtonWrapper'>
+          <button className='headerButton' onClick={() => this.updatePage('/')}>Home</button>
+        </div>
+        <div className='headerButtonWrapper'>
+          <button className='headerButton' onClick={() => this.updatePage('/blog')}>Blog</button>
+        </div>
+        <div className='headerButtonWrapper'>
+          <button className='headerButton' onClick={() => this.updatePage('/contact')}>Contact</button>
+        </div>
       </div>
     );
   }
@@ -33,13 +27,13 @@ export default class Header extends Component {
 
     if (this.props.user === '' || this.props.user === null) {
       account = (
-        <div>
+        <div className='headerButtonWrapper'>
           <button className='headerButton' onClick={() => this.updatePage('/login')}>Log in</button>
         </div>
       );
     } else {
       account = (
-        <div>
+        <div className='headerButtonWrapper'>
           <span>{this.props.user}</span>
           <button className='headerButton' onClick={this.props.logOut}>Log out</button>
         </div>
@@ -55,7 +49,10 @@ export default class Header extends Component {
 
   render() {
     return (
-      this.getHeader()
+      <div className='header'>
+        {this.getNavBar()}
+        {this.getAccount()}
+      </div>
     );
   }
 }
