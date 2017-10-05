@@ -34,8 +34,12 @@ export default class Header extends Component {
     } else {
       account = (
         <div className='headerButtonWrapper'>
-          <span>{this.props.user}</span>
-          <button className='headerButton' onClick={this.props.logOut}>Log out</button>
+          <div className='userSpanWrapper'>
+            <span className='userSpan'>Welcome {this.props.user}!</span>
+          </div>
+          <div className='logOutWrapper'>
+            <button className='headerButton' onClick={this.props.logOut}>Settings</button>
+          </div>
         </div>
       );
     }

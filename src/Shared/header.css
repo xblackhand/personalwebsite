@@ -26,7 +26,27 @@
   vertical-align: middle;
 }
 
+.userSpanWrapper {
+  display: table;
+  float: left;
+  height: 100%;
+}
+
+.userSpan {
+  display: table-cell;
+  vertical-align: middle;
+  color: red;
+}
+
+.logOutWrapper {
+  display: table;
+  float: right;
+  height: 100%;
+}
+
 .headerButton {
+  display: table-cell;
+  vertical-align: middle;
   -webkit-appearance: none;
   border: 0;
   height: 100%;
