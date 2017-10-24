@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Shared/Header';
+import Intro from './Intro/Intro';
 import Footer from './Shared/Footer';
-import HomePage from './HomePage/HomePage';
+import Resume from './Resume/Resume';
 import './App.css'
 
 class App extends Component {
@@ -10,11 +11,12 @@ class App extends Component {
       <div>
         <Header/>
         <div className='body'>
-          <HomePage/>
+          <Intro />
+          <Resume />
         </div>
         <Footer />
       </div>
-    )
+    );
   }
 }
 

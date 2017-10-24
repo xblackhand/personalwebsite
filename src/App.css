@@ -3,4 +3,36 @@
   top: 50px;
   bottom: 50px;
   width: 100%;
+  overflow: auto;
+}
+
+.bodyDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.resume {
+  height: 1100px;
+}
+
+.introTopDiv {
+  padding-top: 1em;
+}
+
+.introBottomDiv {
+  padding-bottom: 1em;
+}
+
+.resumeIFrame {
+  display: flex;
+  width: 850px;
+  height: 100%;
+  align-self: center;
+  overflow: hidden;
 }

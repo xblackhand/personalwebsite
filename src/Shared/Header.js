@@ -7,14 +7,6 @@ export default class Header extends Component {
     this.state = {
       quickLinksOpen: false
     };
-    global.addEventListener('click', this.getClick.bind(this));
-  }
-
-  getClick(e) {
-    e.preventDefault();
-    if (!this.refs.dropDownRef.contains(e.target)) {
-      this.setState({quickLinksOpen: false});
-    }
   }
 
   quickLinksClicked(e) {
@@ -22,11 +14,9 @@ export default class Header extends Component {
     this.setState({quickLinksOpen: !this.state.quickLinksOpen});
   }
 
-  quickLinksBlur(e) {
+  closeQuickLinks(e) {
     e.preventDefault();
-    if (this.state.quickLinksOpen) {
-      this.setState({quickLinksOpen: false});
-    }
+    this.setState({quickLinksOpen: false});
   }
 
   getNavBar() {
@@ -51,7 +41,7 @@ export default class Header extends Component {
 
     return (
       <div className='account'>
-        <div ref='dropDownRef'>
+        <div ref='dropDownRef' onMouseLeave={this.closeQuickLinks.bind(this)}>
           <button className='headerButton' style={quickLinkFontColor} onClick={this.quickLinksClicked.bind(this)}>Quick Links</button>
           <div className='dropDown' style={dropDownStyle}>
             <button className='headerButton dropDownButton' onClick={() => window.open('https://www.linkedin.com/in/travis-cook-2b5546117/', '_blank')}>LinkedIn</button><br/>
