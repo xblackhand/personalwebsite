@@ -1,62 +1,67 @@
-
 .header {
   position: absolute;
   width: 100%;
   height: 50px;
   background-color: black;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
 }
 
 .navbar {
-  display: table;
-  float: left;
   padding-left: 1em;
   height: 100%;
 }
 
 .account {
-  display: table;
-  float: right;
   padding-right: 1em;
   height: 100%;
-}
-
-.headerButtonWrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.userSpanWrapper {
-  display: table;
-  float: left;
-  height: 100%;
-}
-
-.userSpan {
-  display: table-cell;
-  vertical-align: middle;
-  color: red;
-}
-
-.logOutWrapper {
-  display: table;
-  float: right;
-  height: 100%;
+  display: flex;
 }
 
 .headerButton {
-  display: table-cell;
-  vertical-align: middle;
-  -webkit-appearance: none;
+  appearance: none;
   border: 0;
   height: 100%;
   width: 100%;
   background-color: transparent;
   color: white;
   font-size: 18px;
-  padding: .25em .75em;
 }
 
 .headerButton:hover {
-  color: #AAAAAA;
+  color: #15F0E1;
+}
+
+.headerButton:focus {
+  outline: 0;
+}
+
+.blogTitle {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.dropDown {
+  background-color: black;
+  box-shadow: 8px 8px 20px 0px rgba(0,0,0,0.5);
+  transition: all .3s ease-in-out 0s;
+}
+
+.dropDownButton {
+  padding: .5em 0;
+}
+
+.resumeDiv {
+  display: inline;
+}
+
+.resumeFrame {
+  height: 100%;
+  width: 100%;
 }
