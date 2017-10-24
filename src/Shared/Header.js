@@ -2,60 +2,72 @@ import React, {Component} from 'react';
 import './header.css';
 
 export default class Header extends Component {
-  updatePage(page) {
-    this.props.updatePage(page);
+  constructor(props) {
+    super(props);
+    this.state = {
+      quickLinksOpen: false
+    };
+    global.addEventListener('click', this.getClick.bind(this));
   }
 
-  getHeader() {
-    var header;
+  getClick(e) {
+    e.preventDefault();
+    if (!this.refs.dropDownRef.contains(e.target)) {
+      this.setState({quickLinksOpen: false});
+    }
+  }
 
-    header = (
-      <div className='header'>
-        {this.getNavBar()}
-        {this.getAccount()}
-      </div>
-    );
-    return header;
+  quickLinksClicked(e) {
+    e.preventDefault();
+    this.setState({quickLinksOpen: !this.state.quickLinksOpen});
+  }
+
+  quickLinksBlur(e) {
+    e.preventDefault();
+    if (this.state.quickLinksOpen) {
+      this.setState({quickLinksOpen: false});
+    }
   }
 
   getNavBar() {
     return (
       <div className='navbar'>
-        <button className='headerButton' onClick={() => this.updatePage('/')}>Home</button>
-        <button className='headerButton' onClick={() => this.updatePage('/blog')}>Blog</button>
-        <button className='headerButton' onClick={() => this.updatePage('/contact')}>Contact</button>
+        <div className='blogTitle'>Travis Cook</div>
       </div>
     );
   }
 
-  getAccount() {
-    var account;
+  getQuickLinks() {
+    var dropDownStyle;
+    var quickLinkFontColor;
 
-    if (this.props.user === '' || this.props.user === null) {
-      account = (
-        <div>
-          <button className='headerButton' onClick={() => this.updatePage('/login')}>Log in</button>
-        </div>
-      );
+    if (this.state.quickLinksOpen) {
+      quickLinkFontColor = {'color': '#15F0E1'};
+      dropDownStyle = {visibility: 'visible', opacity: '1'};
     } else {
-      account = (
-        <div>
-          <span>{this.props.user}</span>
-          <button className='headerButton' onClick={this.props.logOut}>Log out</button>
-        </div>
-      );
+      quickLinkFontColor = {'color': 'inherit'};
+      dropDownStyle = {visibility: 'hidden', opacity: '0'};
     }
 
     return (
       <div className='account'>
-        {account}
+        <div ref='dropDownRef'>
+          <button className='headerButton' style={quickLinkFontColor} onClick={this.quickLinksClicked.bind(this)}>Quick Links</button>
+          <div className='dropDown' style={dropDownStyle}>
+            <button className='headerButton dropDownButton' onClick={() => window.open('https://www.linkedin.com/in/travis-cook-2b5546117/', '_blank')}>LinkedIn</button><br/>
+            <button className='headerButton dropDownButton' onClick={() => window.location.href='mailto: traviswaynecook@gmail.com?subject=Sending from your website link&body=Hi Travis,'}>Email</button><br/>
+          </div>
+        </div>
       </div>
     )
   }
 
   render() {
     return (
-      this.getHeader()
+      <div className='header'>
+        {this.getNavBar()}
+        {this.getQuickLinks()}
+      </div>
     );
   }
 }
