@@ -9,6 +9,13 @@ export default class Intro extends Component {
           Hi there! Glad you found your way here.<br/>
           I created this website to show some of my skills and to house my resume.
         </div>
+        <div>
+          Current projects
+          <br/><br/>
+          <a href='http://checkbookanywhere.com'>CheckbookAnywhere.com</a>
+          <br/>
+          <a href='https://www.npmjs.com/package/tc-version'>tc-version</a>
+        </div>
         <div className='introBottomDiv'>
           Now the resume!
         </div>

@@ -6,7 +6,7 @@ export default class Resume extends Component {
     return (
       <div className='bodyDiv resume'>
         <iframe className='resumeIFrame' title='resumeIFrame'
-         src="https://docs.google.com/document/d/e/2PACX-1vTgWSn-0l8eQNZzc63BpmW7nDK6IxC2nNKJTLOxI6QeMxo3MlgJA_WSn8WaVYkCUqZ-ucZ5Bjo8s4XI/pub?embedded=true"/>
+          src="https://drive.google.com/file/d/0B1BqVslnA1Pjc2xoOUpnVjdfeWs/preview" />
       </div>
     );
   }
