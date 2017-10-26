@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './header.css';
+import './Header.css';
 
 export default class Header extends Component {
   constructor(props) {
@@ -7,6 +7,18 @@ export default class Header extends Component {
     this.state = {
       quickLinksOpen: false
     };
+    global.addEventListener('click', this.handleClick.bind(this));
+    global.addEventListener('touchstart', this.handleClick.bind(this));
+  }
+
+  handleClick(e) {
+    var elems = document.getElementsByClassName('headerButton');
+    for (var i = 0; i < elems.length; i++) {
+      if (elems.item(0) === e.target) {
+        return;
+      }
+    }
+    this.setState({quickLinksOpen: false});
   }
 
   quickLinksClicked(e) {
@@ -44,10 +56,12 @@ export default class Header extends Component {
       dropDownStyle = {visibility: 'hidden', opacity: '0'};
     }
 
+    // onMouseLeave={this.closeQuickLinks.bind(this)}
+    // onMouseEnter={this.openQuickLinks.bind(this)}
     return (
       <div className='account'>
-        <div ref='dropDownRef' onMouseLeave={this.closeQuickLinks.bind(this)} onMouseEnter={this.openQuickLinks.bind(this)}>
-          <button className='headerButton' style={quickLinkFontColor}>
+        <div ref='dropDownRef' onClick={this.quickLinksClicked.bind(this)}>
+          <button className='headerButton' style={quickLinkFontColor} tag='test'>
             Quick Links
           </button>
           <div className='dropDown' style={dropDownStyle}>

@@ -1,0 +1,9 @@
+.resumeIFrame {
+  display: flex;
+  width: 850px;
+  max-width: 80%;
+  height: 90%;
+  align-self: center;
+  overflow: hidden;
+  border: 2px solid black;
+}

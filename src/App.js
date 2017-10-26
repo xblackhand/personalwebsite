@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Shared/Header';
+import Header from './Header/Header';
 import Intro from './Intro/Intro';
-import Footer from './Shared/Footer';
+import Footer from './Footer/Footer';
 import Resume from './Resume/Resume';
 import './App.css'
 
