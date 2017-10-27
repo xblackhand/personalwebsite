@@ -10,11 +10,11 @@ import {
 export default class Projects extends Component {
   render() {
     return (
-      <div className='bodyDiv centered'>
-        <div className='bodyDiv header bottom'>
+      <div>
+        <div className='projectHeader'>
           <h2>{projectsHeader}</h2>
         </div>
-        <div className='bodyDiv row-orientation top'>
+        <div className='flex-row'>
           <div>
             <h3>{checkbookAnywhereHeader}</h3>
             <p>{checkbookAnywhereBodyText}</p>

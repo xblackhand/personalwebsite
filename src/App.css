@@ -1,4 +1,4 @@
-.body {
+.bodyAbsolute {
   position: absolute;
   top: 50px;
   bottom: 50px;
@@ -6,47 +6,31 @@
   overflow: auto;
 }
 
-.bodyDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-  justify-content: space-between;
+.mainBody {
+  display: block;
+  width: 90%;
   height: 100%;
-  width: 80%;
   margin: 0 auto;
-  overflow: auto;
-  text-align: center;
 }
 
-.bodyDiv > .row-orientation {
-  flex-direction: row !important;
-}
-
-.bodyDiv > .header {
-  height: auto;
-  color: inherit;
-  background-color: inherit;
-}
-
-.bodyDiv > .centered {
-  justify-content: center !important;
-}
-
-.bodyDiv > .bottom {
-  justify-content: flex-end !important;
-}
-
-.bodyDiv > .top {
-  justify-content: flex-start !important;
-}
-
-.bodyDiv > div {
+.mainBody > div {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: column;
+  text-align: center;
   height: 100%;
   width: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row > div {
+  width: 100%;
+  height: 100%;
 }
 
 .bodyButton {

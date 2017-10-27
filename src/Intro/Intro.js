@@ -9,7 +9,7 @@ import  {
 export default class Intro extends Component {
   render() {
     return (
-      <div className='bodyDiv'>
+      <div>
         <div>
           {introText}
           <br/>
@@ -18,7 +18,7 @@ export default class Intro extends Component {
         <div>
           <Projects />
         </div>
-        <div className='introBottomDiv'>
+        <div>
           {outroText}
         </div>
       </div>

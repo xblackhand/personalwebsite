@@ -10,9 +10,11 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <div className='body'>
-          <Intro />
-          <Resume />
+        <div className='bodyAbsolute'>
+          <div className='mainBody'>
+            <Intro />
+            <Resume />
+          </div>
         </div>
         <Footer />
       </div>

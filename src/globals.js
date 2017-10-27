@@ -21,15 +21,9 @@ export const outroText = 'Now the resume!';
 export const tcVersionLink = 'https://www.npmjs.com/package/tc-version';
 export const checkbookAnywhereLink = 'http://checkbookanywhere.com';
 export const checkbookAnywhereHeader = 'CheckbookAnywhere';
-export const checkbookAnywhereBodyText = 'An online C#, ASP.Net application that\
- utilizes a Microsoft SQL database on SQL Server 2016 Express. The application\
- was designed for users that checkbook their bank accounts to have a cross-platform\
- way to store their transactions.';
+export const checkbookAnywhereBodyText = 'An online C#, ASP.Net application that utilizes a Microsoft SQL database on SQL Server 2016 Express. The application was designed for users that checkbook their bank accounts to have a cross-platform way to store their transactions.';
 export const tcVersionHeader = 'tc-version'
-export const tcVersionBodyText = 'Nodejs package to convert standard version\
- strings, an array of positive integers, or a list of positive integers to a Version\
- object. The Version objects can then be compared, incremented by different version\
- upgrades, and converted back to a string in the format desired by a developer.';
+export const tcVersionBodyText = 'Nodejs package to convert standard version strings, an array of positive integers, or a list of positive integers to a Version object. The Version objects can then be compared, incremented by different version upgrades, and converted back to a string in the format desired by a developer.';
 
 /// FOOTER STRINGS
 export const copyright = 'Travis Cook';
