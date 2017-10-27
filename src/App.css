@@ -4,7 +4,6 @@
   bottom: 50px;
   width: 100%;
   overflow: auto;
-  padding: 0 !important;
 }
 
 .bodyDiv {
@@ -13,10 +12,33 @@
   align-items: center;
   align-self: center;
   justify-content: space-between;
-
   height: 100%;
+  width: 80%;
+  margin: 0 auto;
   overflow: auto;
   text-align: center;
+}
+
+.bodyDiv > .row-orientation {
+  flex-direction: row !important;
+}
+
+.bodyDiv > .header {
+  height: auto;
+  color: inherit;
+  background-color: inherit;
+}
+
+.bodyDiv > .centered {
+  justify-content: center !important;
+}
+
+.bodyDiv > .bottom {
+  justify-content: flex-end !important;
+}
+
+.bodyDiv > .top {
+  justify-content: flex-start !important;
 }
 
 .bodyDiv > div {
@@ -24,18 +46,23 @@
   justify-content: center;
   flex-direction: column;
   height: 100%;
-
+  width: 100%;
 }
 
 .bodyButton {
+  display: block;
   appearance: none;
   border: 2px black solid;
   background-color: white;
   color: black;
   text-align: center;
   padding: .5em 1em;
+  margin: 0 auto;
+  font-size: 16px;
+  font-style:
 }
 
 .bodyButton:hover {
   background-color: #15F0E1;
+  cursor: pointer;
 }

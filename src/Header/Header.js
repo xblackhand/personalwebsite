@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import './Header.css';
+import {
+  title, linkButtonText, gitHubLinkText, gitHubLink, npmLinkText, npmLink,
+  linkedInLinkText, linkedInLink, emailLinkText, emailLink
+} from '../globals';
 
 export default class Header extends Component {
   constructor(props) {
@@ -26,33 +30,24 @@ export default class Header extends Component {
     this.setState({quickLinksOpen: !this.state.quickLinksOpen});
   }
 
-  openQuickLinks(e) {
-    e.preventDefault();
-    this.setState({quickLinksOpen: true});
-  }
-
-  closeQuickLinks(e) {
-    e.preventDefault();
-    this.setState({quickLinksOpen: false});
-  }
-
   getNavBar() {
     return (
       <div className='navbar'>
-        <div className='blogTitle'>Travis Cook</div>
+        <div className='blogTitle'>
+          {title}
+        </div>
       </div>
     );
   }
 
   getQuickLinks() {
     var dropDownStyle;
-    var quickLinkFontColor;
+    var quickLinkStyle;
 
     if (this.state.quickLinksOpen) {
-      quickLinkFontColor = {'color': '#15F0E1'};
+      quickLinkStyle = {'color': '#15F0E1'};
       dropDownStyle = {visibility: 'visible', opacity: '1'};
     } else {
-      quickLinkFontColor = {'color': 'inherit'};
       dropDownStyle = {visibility: 'hidden', opacity: '0'};
     }
 
@@ -60,29 +55,30 @@ export default class Header extends Component {
     // onMouseEnter={this.openQuickLinks.bind(this)}
     return (
       <div className='account'>
-        <div ref='dropDownRef' onClick={this.quickLinksClicked.bind(this)}>
-          <button className='headerButton' style={quickLinkFontColor} tag='test'>
-            Quick Links
+        <div ref='dropDownRef'>
+          <button className='headerButton' style={quickLinkStyle} tag='test'
+            onClick={this.quickLinksClicked.bind(this)}>
+            {linkButtonText}
           </button>
           <div className='dropDown' style={dropDownStyle}>
             <button className='headerButton dropDownButton'
-              onClick={() => window.open('https://www.linkedin.com/in/travis-cook-2b5546117', '_blank')}>
-              LinkedIn
+              onClick={() => window.open(linkedInLink, '_blank')}>
+              {linkedInLinkText}
             </button>
             <br/>
             <button className='headerButton dropDownButton'
-              onClick={() => window.open('https://github.com/xblackhand', '_blank')}>
-              GitHub
+              onClick={() => window.open(gitHubLink, '_blank')}>
+              {gitHubLinkText}
             </button>
             <br/>
             <button className='headerButton dropDownButton'
-              onClick={() => window.open('https://www.npmjs.com/~xblackhand', '_blank')}>
-              npm
+              onClick={() => window.open(npmLink, '_blank')}>
+              {npmLinkText}
             </button>
             <br/>
             <button className='headerButton dropDownButton'
-              onClick={() => window.location.href='mailto: traviswaynecook@gmail.com?subject=Sending from your website link&body=Hi Travis,'}>
-              Email
+              onClick={() => window.location.href=emailLink}>
+              {emailLinkText}
             </button>
           </div>
         </div>
