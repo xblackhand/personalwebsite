@@ -15,7 +15,7 @@ export default class Projects extends Component {
           <h2>{projectsHeader}</h2>
         </div>
         <div className='flex-row'>
-          <div>
+          <div className='flex-row-item'>
             <h3>{checkbookAnywhereHeader}</h3>
             <p>{checkbookAnywhereBodyText}</p>
             <button className='bodyButton'
@@ -23,7 +23,7 @@ export default class Projects extends Component {
               {checkItOutButtonText}
             </button>
           </div>
-          <div>
+          <div className='flex-row-item'>
             <h3>{tcVersionHeader}</h3>
             <p>{tcVersionBodyText}</p>
             <button className='bodyButton'

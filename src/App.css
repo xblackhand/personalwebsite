@@ -26,21 +26,6 @@
   width: 100%;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.flex-row > div {
-  flex: 1 0 0;
-  min-width: 200px;
-  align-items: center;
-  justify-content: center;
-  padding: 1em;
-  margin: 0 auto;
-}
-
 .bodyButton {
   display: block;
   appearance: none;

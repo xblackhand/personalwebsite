@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import Intro from './Intro/Intro';
-import Footer from './Footer/Footer';
 import Resume from './Resume/Resume';
+import Outro from './Outro/Outro';
+import Footer from './Footer/Footer';
 import './App.css'
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           <div className='mainBody'>
             <Intro />
             <Resume />
+            <Outro />
           </div>
         </div>
         <Footer />

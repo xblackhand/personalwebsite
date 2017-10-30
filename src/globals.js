@@ -15,7 +15,6 @@ export const introText = 'Hi there! I am glad you found your way here.';
 export const introText2 = 'I created this website to show off some of my skills, projects, and resume.';
 export const projectsHeader = 'Current projects';
 export const checkItOutButtonText = 'Check It Out';
-export const outroText = 'Now the resume!';
 
 /// PROJECTS STRINGS
 export const tcVersionLink = 'https://www.npmjs.com/package/tc-version';
@@ -24,6 +23,12 @@ export const checkbookAnywhereHeader = 'CheckbookAnywhere';
 export const checkbookAnywhereBodyText = 'An online C#, ASP.Net application that utilizes a Microsoft SQL database on SQL Server 2016 Express. The application was designed for users that checkbook their bank accounts to have a cross-platform way to store their transactions.';
 export const tcVersionHeader = 'tc-version'
 export const tcVersionBodyText = 'Nodejs package to convert standard version strings, an array of positive integers, or a list of positive integers to a Version object. The Version objects can then be compared, incremented by different version upgrades, and converted back to a string in the format desired by a developer.';
+
+/// RESUME STRINGS
+export const resumeHeader = 'Now the resume!';
+
+/// OUTRO STRINGS
+export const outroText = 'Thanks for visiting!';
 
 /// FOOTER STRINGS
 export const copyright = 'Travis Cook';

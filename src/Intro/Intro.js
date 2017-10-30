@@ -3,7 +3,7 @@ import Projects from '../Projects/Projects';
 import '../App.css';
 import './Intro.css';
 import  {
-  introText, introText2, outroText
+  introText, introText2
 } from '../globals';
 
 export default class Intro extends Component {
@@ -17,9 +17,6 @@ export default class Intro extends Component {
         </div>
         <div>
           <Projects />
-        </div>
-        <div>
-          {outroText}
         </div>
       </div>
     );
