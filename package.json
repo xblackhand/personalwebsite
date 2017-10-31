@@ -1,5 +1,6 @@
 {
   "name": "blogwebsite",
+  "productName": "Travis Cook",
   "version": "0.1.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
@@ -8,7 +9,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "^1.0.15"
   },
   "scripts": {
     "start": "react-scripts start",

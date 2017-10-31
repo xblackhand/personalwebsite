@@ -85,6 +85,7 @@
 .resumeWrapper {
   display: flex;
   position: relative;
+  flex: 0 1 auto;
   height: 100%;
   width: 100%;
   margin: 0 auto;
@@ -93,12 +94,13 @@
 .resumeIFrame {
   display: flex;
   position: absolute;
+  flex: 0 1 auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
   max-width: 856px;
   overflow: hidden;
   border: 1px solid black;
