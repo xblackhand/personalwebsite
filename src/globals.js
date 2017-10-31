@@ -26,6 +26,7 @@ export const tcVersionBodyText = 'Nodejs package to convert standard version str
 
 /// RESUME STRINGS
 export const resumeHeader = 'Now the resume!';
+export const resumeEmbeddedLink = '//drive.google.com/file/d/0B1BqVslnA1Pjc2xoOUpnVjdfeWs/preview';
 
 /// OUTRO STRINGS
 export const outroText = 'Thanks for visiting!';

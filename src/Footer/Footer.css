@@ -1,16 +1,14 @@
 .footer {
   position: absolute;
-  display: table;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   height: 50px;
   width: 100%;
+  min-width: 350px;
   background-color: black;
   color: white;
   font-size: 10px;
   text-align: center;
-}
-
-.textWrapper {
-  display: table-cell;
-  vertical-align: middle;
 }

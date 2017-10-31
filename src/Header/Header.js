@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './Header.css';
 import {
-  title, linkButtonText, gitHubLinkText, gitHubLink, npmLinkText, npmLink,
-  linkedInLinkText, linkedInLink, emailLinkText, emailLink
+  title, gitHubLinkText, gitHubLink, npmLinkText, npmLink, emailLinkText,
+  linkedInLinkText, linkedInLink, emailLink
 } from '../globals';
 
 export default class Header extends Component {
@@ -56,9 +56,9 @@ export default class Header extends Component {
     return (
       <div className='account'>
         <div ref='dropDownRef'>
-          <button className='headerButton' style={quickLinkStyle} tag='test'
+          <button className='headerButton menuButton' style={quickLinkStyle} tag='test'
             onClick={this.quickLinksClicked.bind(this)}>
-            {linkButtonText}
+            &#9776;
           </button>
           <div className='dropDown' style={dropDownStyle}>
             <button className='headerButton dropDownButton'
