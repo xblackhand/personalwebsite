@@ -12,17 +12,21 @@ export const emailLink = 'mailto: traviswaynecook@gmail.com?subject=Sending from
 
 /// INTRO STRINGS
 export const introText = 'Hi there! I am glad you found your way here.';
-export const introText2 = 'I created this website to show off some of my skills, projects, and resume.';
+export const introText2 = 'I created this website to show off some of my skills, projects, and resume. In the menu button above there are links to my LinkedIn, npm, and GitHub profiles; there is also a quick link to shoot me an email if you have any questions. Below are my recent personal projects and my resume. Enjoy!';
 export const projectsHeader = 'Current projects';
-export const checkItOutButtonText = 'Check It Out';
 
 /// PROJECTS STRINGS
+export const checkItOutButtonText = 'Check It Out';
+export const lookAtTheCodeButtonText = 'Look At The Code';
 export const tcVersionLink = 'https://www.npmjs.com/package/tc-version';
 export const checkbookAnywhereLink = 'http://checkbookanywhere.com';
+export const personalWebsiteLink = 'https://github.com/xblackhand/personalwebsite';
 export const checkbookAnywhereHeader = 'CheckbookAnywhere';
 export const checkbookAnywhereBodyText = 'An online C#, ASP.Net application that utilizes a Microsoft SQL database on SQL Server 2016 Express. The application was designed for users that checkbook their bank accounts to have a cross-platform way to store their transactions.';
 export const tcVersionHeader = 'tc-version'
-export const tcVersionBodyText = 'Nodejs package to convert standard version strings, an array of positive integers, or a list of positive integers to a Version object. The Version objects can then be compared, incremented by different version upgrades, and converted back to a string in the format desired by a developer.';
+export const tcVersionBodyText = 'A Nodejs package to convert standard version strings, an array of positive integers, or a list of positive integers to a Version object. The Version objects can then be compared, incremented by different version upgrades, and converted back to a string in the format desired by a developer.';
+export const personalWebsiteHeader = 'Personal Website';
+export const personalWebsiteBodyText = 'I created this website with Nodejs and Reactjs in an effort to centralize all things I have done on my own time.';
 
 /// RESUME STRINGS
 export const resumeHeader = 'Now the resume!';

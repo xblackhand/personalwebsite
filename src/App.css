@@ -2,29 +2,34 @@
   position: absolute;
   display: block;
   width: 100%;
-  top: 0;
-  bottom: 0;
-  margin: 50px 0 50px 0;
+  top: 50px;
+  bottom: 50px;
+  /*margin: 50px 0 50px 0;*/
   overflow: auto;
 }
 
 .innerBody {
   position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-width: 380px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  min-width: 350px;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
 .innerBody > div {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  flex: 0 1 auto;
-  width: 80%;
+  width: 100%;
   padding: 1em 0 1em 0;
   margin: 0 auto;
 }
@@ -67,9 +72,7 @@
 }
 
 .resumeSection {
-  width: 100%;
   height: 100%;
-  margin: 0 auto;
   padding-top: 0 !important;
 }
 
@@ -85,24 +88,15 @@
 .resumeWrapper {
   display: flex;
   position: relative;
-  flex: 0 1 auto;
   height: 100%;
   width: 100%;
   margin: 0 auto;
 }
 
 .resumeIFrame {
-  display: flex;
-  position: absolute;
-  flex: 0 1 auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: calc(100% - 8px);
-  height: calc(100% - 8px);
-  max-width: 856px;
-  overflow: hidden;
+  position: relative;
   border: 1px solid black;
-  margin: 0 auto !important;
+  margin: 0 auto;
+  width: calc(100% - 4px);
+  max-width: 850px;
 }

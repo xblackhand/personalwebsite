@@ -7,16 +7,38 @@ import {
   introText, introText2, resumeHeader, outroText, projectsHeader, tcVersionLink,
   checkbookAnywhereLink, checkbookAnywhereHeader, tcVersionHeader,
   checkbookAnywhereBodyText, tcVersionBodyText, checkItOutButtonText,
-  resumeEmbeddedLink
+  resumeEmbeddedLink, personalWebsiteLink, personalWebsiteHeader,
+  personalWebsiteBodyText, lookAtTheCodeButtonText
 } from './globals';
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    window.addEventListener('resize', this.resizeIFrame.bind(this));
+  }
+
+  componentDidMount() {
+    this.resizeIFrame();
+  }
+
+  resizeIFrame(e) {
+    var frame = document.getElementById('resume');
+    var newFrameWidth = window.innerWidth * .79 - 4;
+    var newFrameHeight = (window.innerHeight - 100) * .79 - 4;
+    frame.width = newFrameWidth;
+    if (newFrameHeight / newFrameWidth > 1.285) {
+      frame.height = newFrameWidth * 1.285;
+    } else {
+      frame.height = newFrameHeight;
+    }
+  }
+
   render() {
     return (
       <div>
         <Header/>
         <div className='mainBody'>
-          <div className='innerBody'>
+          <div className='innerBody' id='innerBody'>
             <div className='introSection'>
               {introText}
               <br/>
@@ -37,6 +59,12 @@ export default class App extends Component {
                   <h3>{tcVersionHeader}</h3>
                   <p>{tcVersionBodyText}</p>
                   <LinkButton linkTo={tcVersionLink} text={checkItOutButtonText}
+                    backgroundColor='white' hoverBackgroundColor='#15F0E1' />
+                </div>
+                <div className='flex-row-item'>
+                  <h3>{personalWebsiteHeader}</h3>
+                  <p>{personalWebsiteBodyText}</p>
+                  <LinkButton linkTo={personalWebsiteLink} text={lookAtTheCodeButtonText}
                     backgroundColor='white' hoverBackgroundColor='#15F0E1' />
                 </div>
               </div>
