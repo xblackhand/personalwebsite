@@ -97,6 +97,5 @@
   position: relative;
   border: 1px solid black;
   margin: 0 auto;
-  width: calc(100% - 4px);
   max-width: 850px;
 }

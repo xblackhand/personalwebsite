@@ -1,8 +1,8 @@
 {
-  "name": "blogwebsite",
-  "productName": "Travis Cook",
-  "version": "0.1.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "name": "personalwebsite",
+  "productName": "Travis Wayne Cook Personal Website",
+  "version": "0.2.0",
+  "description": "Travis Wayne Cook Personal Website made with create-react-app boilerplate.",
   "main": "index.js",
   "private": true,
   "dependencies": {
@@ -19,12 +19,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xblackhand/blogwebsite.git"
+    "url": "git+https://github.com/xblackhand/personalwebsite.git"
   },
-  "author": "",
+  "author": {
+    "name": "Travis Wayne Cook",
+    "email": "traviswaynecook@gmail.com",
+    "url": "www.traviswaynecook.com"
+  },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xblackhand/blogwebsite/issues"
+    "url": "https://github.com/xblackhand/personalwebsite/issues"
   },
-  "homepage": "https://github.com/xblackhand/blogwebsite#readme"
+  "homepage": "https://github.com/xblackhand/personalwebsite#readme"
 }
