@@ -24,10 +24,10 @@ export default class App extends Component {
   resizeIFrame(e) {
     var frame = document.getElementById('resume');
     var newFrameWidth = window.innerWidth * .79 - 4;
-    var newFrameHeight = (window.innerHeight - 100) * .79 - 4;
+    var newFrameHeight = (window.innerHeight - 100) * .89 - 4;
     frame.width = newFrameWidth;
-    if (newFrameHeight / newFrameWidth > 1.285) {
-      frame.height = newFrameWidth * 1.285;
+    if (newFrameHeight / newFrameWidth > 1.29) {
+      frame.height = newFrameWidth * 1.29;
     } else {
       frame.height = newFrameHeight;
     }
