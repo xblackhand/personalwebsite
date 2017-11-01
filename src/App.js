@@ -75,6 +75,7 @@ export default class App extends Component {
               </div>
               <div className='resumeWrapper'>
                 <iframe className='resumeIFrame' title='resumeIFrame' id='resume'
+                  height='600px' width='450px'
                   src={resumeEmbeddedLink} />
               </div>
             </div>
