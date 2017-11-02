@@ -1,7 +1,7 @@
 {
   "name": "personalwebsite",
   "productName": "Travis Wayne Cook Personal Website",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Travis Wayne Cook Personal Website made with create-react-app boilerplate.",
   "main": "index.js",
   "private": true,

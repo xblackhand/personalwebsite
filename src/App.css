@@ -4,7 +4,7 @@
   width: 100%;
   top: 50px;
   bottom: 50px;
-  /*margin: 50px 0 50px 0;*/
+  min-width: 350px;
   overflow: auto;
 }
 
@@ -17,7 +17,6 @@
   justify-content: center;
   width: 80%;
   height: auto;
-  min-width: 350px;
   overflow-x: hidden;
   margin: 0 auto;
 }

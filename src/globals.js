@@ -24,9 +24,9 @@ export const personalWebsiteLink = 'https://github.com/xblackhand/personalwebsit
 export const checkbookAnywhereHeader = 'CheckbookAnywhere';
 export const checkbookAnywhereBodyText = 'An online C#, ASP.Net application that utilizes a Microsoft SQL database on SQL Server 2016 Express. The application was designed for users that checkbook their bank accounts to have a cross-platform way to store their transactions.';
 export const tcVersionHeader = 'tc-version'
-export const tcVersionBodyText = 'A Nodejs package to convert standard version strings, an array of positive integers, or a list of positive integers to a Version object. The Version objects can then be compared, incremented by different version upgrades, and converted back to a string in the format desired by a developer.';
+export const tcVersionBodyText = 'A Nodejs package to convert standard version strings, an array of positive integers, or a list of positive integers to a Version object. The Version objects can then be compared, incremented by different version upgrades, and converted back to an array or string in the format desired by a developer.';
 export const personalWebsiteHeader = 'Personal Website';
-export const personalWebsiteBodyText = 'I created this website with Nodejs and Reactjs in an effort to centralize all things I have done on my own time.';
+export const personalWebsiteBodyText = 'This website created with Nodejs, Reactjs, and the create-react-app boilerplate. The websites was made in an effort to centralize all my professional profiles and a few things I have done on my own time.';
 
 /// RESUME STRINGS
 export const resumeHeader = 'Now the resume!';
